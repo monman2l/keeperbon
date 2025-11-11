@@ -1,0 +1,27 @@
+{
+  "brand": "Hello React",
+  "nav": {
+    "home": "Home",
+    "contact": "Contact Us"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "zh": "繁體中文"
+  },
+  "footer": "© {{year}} Hello React Starter",
+  "home": {
+    "eyebrow": "Hello World",
+    "title": "Clean Vite + React starter with Tailwind CSS",
+    "body": "Edit <code>{{file}}</code> and start building.",
+    "reactDocs": "React Docs",
+    "tailwindDocs": "Tailwind Docs"
+  },
+  "contact": {
+    "eyebrow": "Contact Us",
+    "title": "Let's build something together",
+    "body": "Have an idea? Email <link>{{email}}</link> or schedule a call below.",
+    "emailCta": "Email Us",
+    "backHome": "Back Home"
+  }
+}

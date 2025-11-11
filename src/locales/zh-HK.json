@@ -1,0 +1,27 @@
+{
+  "brand": "Hello React",
+  "nav": {
+    "home": "首頁",
+    "contact": "聯絡我們"
+  },
+  "language": {
+    "label": "語言",
+    "en": "English",
+    "zh": "繁體中文"
+  },
+  "footer": "© {{year}} Hello React Starter",
+  "home": {
+    "eyebrow": "你好，世界",
+    "title": "輕量 Vite + React + Tailwind CSS 起步範本",
+    "body": "編輯 <code>{{file}}</code> 即可開始開發。",
+    "reactDocs": "React 文件",
+    "tailwindDocs": "Tailwind 文件"
+  },
+  "contact": {
+    "eyebrow": "聯絡我們",
+    "title": "一起打造下一個作品",
+    "body": "有合作想法？歡迎電郵 <link>{{email}}</link>，或預約會議進一步交流。",
+    "emailCta": "寄信給我們",
+    "backHome": "返回首頁"
+  }
+}

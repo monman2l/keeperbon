@@ -17,6 +17,13 @@
 - 新增页面时可在 `src/pages/<name>` 创建组件，并在 `src/app/App.jsx` 的路由配置数组中注册。
 - `src/components/layout/RootLayout.jsx` 负责全局布局（导航、页脚、`<Outlet />`），`App.jsx` 仅关注路由配置。
 
+## 多语言 / i18n
+
+- i18n 由 `i18next + react-i18next` 驱动，配置位于 `src/providers/i18n/i18n.js`。
+- 目前提供 `en` 与 `zh-HK` 两份文案，集中存放在 `src/locales/*.json`。
+- `LanguageProvider`（`src/providers/i18n/LanguageProvider.jsx`）在顶层注入语言上下文，并向布局暴露切换函数；布局中的语言切换按钮会立即更新站点文案。
+- 新增语言时，在 `src/locales` 内添加 json 文件，并在 `config.js` 与 `SUPPORTED_LANGUAGES` 中注册即可。
+
 ## 开发
 
 ```bash
