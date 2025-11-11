@@ -1,4 +1,4 @@
-function App() {
+function HomePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-slate-50 px-6">
       <section className="w-full max-w-lg rounded-3xl border border-white/80 bg-white/90 p-10 text-center shadow-[0_20px_80px_-40px_rgba(15,23,42,0.6)] backdrop-blur">
@@ -9,7 +9,7 @@ function App() {
           Clean Vite + React starter with Tailwind CSS
         </h1>
         <p className="mt-4 text-base text-slate-500">
-          Edit <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">src/App.jsx</code> and start building.
+          Edit <code className="rounded bg-slate-100 px-1 py-0.5 text-sm">src/pages/home/HomePage.jsx</code> and start building.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
@@ -34,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage
