@@ -1,5 +1,5 @@
 {
-  "brand": "Hello React",
+  "brand": "Z&E Digital",
   "nav": {
     "home": "首頁",
     "contact": "聯絡我們"
@@ -9,19 +9,19 @@
     "en": "English",
     "zh": "繁體中文"
   },
-  "footer": "© {{year}} Hello React Starter",
+  "footer": "© {{year}} Z&E Digital · 香港",
   "home": {
-    "eyebrow": "你好，世界",
-    "title": "輕量 Vite + React + Tailwind CSS 起步範本",
-    "body": "編輯 <code>{{file}}</code> 即可開始開發。",
-    "reactDocs": "React 文件",
-    "tailwindDocs": "Tailwind 文件"
+    "eyebrow": "精緻網站工作室",
+    "title": "為成長型團隊打造快速且精緻的網站",
+    "body": "我們專注推廣網站與產品前端。編輯 <code>{{file}}</code>，即可立即延伸你的專案。",
+    "reactDocs": "查看案例",
+    "tailwindDocs": "下載服務簡介"
   },
   "contact": {
-    "eyebrow": "聯絡我們",
-    "title": "一起打造下一個作品",
-    "body": "有合作想法？歡迎電郵 <link>{{email}}</link>，或預約會議進一步交流。",
-    "emailCta": "寄信給我們",
+    "eyebrow": "與我們合作",
+    "title": "告訴我們你的上線時程",
+    "body": "透過 <link>{{email}}</link> 發送需求，我們會在一個工作天內回覆範疇與報價。",
+    "emailCta": "寫信給 Z&E Digital",
     "backHome": "返回首頁"
   }
 }

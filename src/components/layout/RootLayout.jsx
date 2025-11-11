@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../hooks/useLanguage.js";
 import { SUPPORTED_LANGUAGES } from "../../providers/i18n/language-context.js";
 
-const linkBase =
-  "text-sm font-semibold px-4 py-2 rounded-full transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
+const navBase =
+  "relative text-sm font-semibold px-4 py-2 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400";
 
 function RootLayout() {
   const { t } = useTranslation();
@@ -12,44 +12,47 @@ function RootLayout() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50">
-      <header className="sticky top-0 z-10 border-b border-white/60 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-          <span className="text-lg font-semibold text-brand-900">
-            {t("brand")}
-          </span>
-          <nav className="flex gap-2">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `${linkBase} ${
-                  isActive
-                    ? "bg-brand-500 text-white"
-                    : "text-slate-600 hover:text-brand-500"
-                }`
-              }
-            >
-              {t("nav.home")}
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `${linkBase} ${
-                  isActive
-                    ? "bg-brand-500 text-white"
-                    : "text-slate-600 hover:text-brand-500"
-                }`
-              }
-            >
-              {t("nav.contact")}
-            </NavLink>
+    <div className="relative flex min-h-screen flex-col bg-gradient-to-b from-brand-50 via-white to-brand-100 text-brand-900">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(91,99,255,0.25),_transparent_55%)]" />
+
+      <header className="sticky top-0 z-20 border-b border-white/40 bg-white/80 shadow-md shadow-brand-900/5 backdrop-blur-xl">
+        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5">
+          <div>
+            <p className="text-xs uppercase tracking-[0.5em] text-brand-400">
+              Hong Kong · Web Solution Studio
+            </p>
+            <span className="text-2xl font-semibold tracking-tight text-brand-800">
+              {t("brand")}
+            </span>
+          </div>
+
+          <nav className="flex gap-2 rounded-full border border-white/60 bg-white/70 p-1 shadow-inner shadow-brand-900/5">
+            {[
+              { to: "/", label: t("nav.home"), end: true },
+              { to: "/contact", label: t("nav.contact") },
+            ].map(({ to, label, end }) => (
+              <NavLink
+                key={to}
+                to={to}
+                end={end}
+                className={({ isActive }) =>
+                  `${navBase} rounded-full ${
+                    isActive
+                      ? "bg-brand-600 text-white shadow-brand-700/40"
+                      : "text-brand-600 hover:text-brand-500"
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
+            ))}
           </nav>
-          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
-            <span className="uppercase tracking-widest">
+
+          <div className="flex items-center gap-3 rounded-full border border-brand-200/70 bg-white/70 p-1 text-xs font-semibold text-brand-600 shadow-inner shadow-brand-900/5">
+            <span className="px-2 uppercase tracking-[0.4em]">
               {t("language.label")}
             </span>
-            <div className="flex rounded-full border border-slate-200 bg-white p-0.5">
+            <div className="flex rounded-full bg-brand-50/80">
               {SUPPORTED_LANGUAGES.map(({ code, label }) => {
                 const isActive = language === code;
                 return (
@@ -57,10 +60,10 @@ function RootLayout() {
                     key={code}
                     type="button"
                     onClick={() => changeLanguage(code)}
-                    className={`rounded-full px-3 py-1 text-xs transition ${
+                    className={`rounded-full px-3 py-1 transition ${
                       isActive
-                        ? "bg-brand-500 text-white shadow-brand-500/30"
-                        : "text-slate-600 hover:text-brand-500"
+                        ? "bg-brand-600 text-white shadow-brand-700/30"
+                        : "text-brand-600 hover:text-brand-500"
                     }`}
                   >
                     {label}
@@ -72,12 +75,17 @@ function RootLayout() {
         </div>
       </header>
 
-      <main className="flex flex-1 flex-col">
+      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-12">
         <Outlet />
       </main>
 
-      <footer className="border-t border-white/60 bg-white/80 py-4 text-center text-xs text-slate-500 backdrop-blur">
-        {t("footer", { year: currentYear })}
+      <footer className="relative z-10 border-t border-white/30 bg-brand-900 text-center text-xs text-brand-100">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-1 px-6 py-6 sm:flex-row sm:justify-between sm:text-left">
+          <span>{t("footer", { year: currentYear })}</span>
+          <span className="text-brand-300">
+            End-to-end web solutions for APAC product and marketing teams.
+          </span>
+        </div>
       </footer>
     </div>
   );

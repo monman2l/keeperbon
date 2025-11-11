@@ -1,5 +1,5 @@
 {
-  "brand": "Hello React",
+  "brand": "Z&E Digital",
   "nav": {
     "home": "Home",
     "contact": "Contact Us"
@@ -9,19 +9,19 @@
     "en": "English",
     "zh": "繁體中文"
   },
-  "footer": "© {{year}} Hello React Starter",
+  "footer": "© {{year}} Z&E Digital · Hong Kong",
   "home": {
-    "eyebrow": "Hello World",
-    "title": "Clean Vite + React starter with Tailwind CSS",
-    "body": "Edit <code>{{file}}</code> and start building.",
-    "reactDocs": "React Docs",
-    "tailwindDocs": "Tailwind Docs"
+    "eyebrow": "Boutique Web Studio",
+    "title": "Fast, polished websites for ambitious teams",
+    "body": "We craft lightning-fast marketing sites and product frontends. Edit <code>{{file}}</code> and keep shipping.",
+    "reactDocs": "View Case Studies",
+    "tailwindDocs": "Download Capability Deck"
   },
   "contact": {
-    "eyebrow": "Contact Us",
-    "title": "Let's build something together",
-    "body": "Have an idea? Email <link>{{email}}</link> or schedule a call below.",
-    "emailCta": "Email Us",
-    "backHome": "Back Home"
+    "eyebrow": "Partner With Us",
+    "title": "Tell us about your launch timeline",
+    "body": "Share your brief via <link>{{email}}</link>. We reply within one business day with scope and budget.",
+    "emailCta": "Email Z&E Digital",
+    "backHome": "Back to Home"
   }
 }
