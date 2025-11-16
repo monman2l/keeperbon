@@ -14,8 +14,7 @@
     "eyebrow": "Z&E Digital · Hong Kong",
     "title": "Web experiences with the calm precision of a product launch.",
     "body": "We build the portals, internal tools, and marketing refreshes founders need when nothing short of premium will do.",
-    "reactDocs": "Book a discovery call",
-    "tailwindDocs": "Download capabilities",
+    "ctaButton": "Book a discovery call",
     "blocks": [
       {
         "tag": "Corporate portals",
