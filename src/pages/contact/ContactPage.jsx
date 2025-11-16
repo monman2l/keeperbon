@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
-const EMAIL = "hello@zedigital.studio";
+const EMAIL = "399199878@qq.com";
 const CHANNEL_URLS = {
   email: `mailto:${EMAIL}`,
-  whatsapp: "https://wa.me/85291234567",
+  whatsapp: "https://wa.me/85269326417",
 };
 
 function ContactPage() {
@@ -24,14 +24,13 @@ function ContactPage() {
         <p className="mt-4 text-base text-brand-600">
           <Trans
             i18nKey="contact.body"
-            values={{ email: EMAIL }}
             components={{
               link: (
                 <a
                   className="font-semibold text-brand-500"
                   href={`mailto:${EMAIL}`}
                 >
-                  {EMAIL}
+                  Z&E Digital
                 </a>
               ),
             }}

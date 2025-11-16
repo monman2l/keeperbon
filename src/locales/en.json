@@ -36,13 +36,13 @@
   },
   "contact": {
     "eyebrow": "Partner With Us",
-    "title": "Tell us about your launch timeline",
-    "body": "Share your brief via <link>{{email}}</link>. We reply within one business day with scope and budget.",
+    "title": "Plan your launch with us",
+    "body": "Co-create your brief with <link>Z&E Digital</link>. We reply within one business day with scope and budget.",
     "emailCta": "Email Z&E Digital",
     "backHome": "Back to Home",
     "channels": [
-      { "label": "Email", "value": "hello@zedigital.studio", "type": "email" },
-      { "label": "WhatsApp", "value": "+852 9123 4567", "type": "whatsapp" }
+      { "label": "Email", "value": "Z&E Digital", "type": "email" },
+      { "label": "WhatsApp", "value": "+852 6932 6417", "type": "whatsapp" }
     ],
     "promo": {
       "badge": "Hong Kong • GMT+8",

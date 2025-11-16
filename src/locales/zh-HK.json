@@ -36,13 +36,13 @@
   },
   "contact": {
     "eyebrow": "與我們合作",
-    "title": "告訴我們你的上線時程",
-    "body": "透過 <link>{{email}}</link> 發送需求，我們會在一個工作天內回覆範疇與報價。",
+    "title": "與我們一起規劃上線",
+    "body": "透過 <link>Z&E Digital</link> 與我們共創需求，我們會在一個工作天內回覆範疇與報價。",
     "emailCta": "寫信給 Z&E Digital",
     "backHome": "返回首頁",
     "channels": [
-      { "label": "Email", "value": "hello@zedigital.studio", "type": "email" },
-      { "label": "WhatsApp", "value": "+852 9123 4567", "type": "whatsapp" }
+      { "label": "Email", "value": "Z&E Digital", "type": "email" },
+      { "label": "WhatsApp", "value": "+852 6932 6417", "type": "whatsapp" }
     ],
     "promo": {
       "badge": "Hong Kong • GMT+8",
