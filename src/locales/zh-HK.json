@@ -14,7 +14,8 @@
     "eyebrow": "Z&E Digital · 香港",
     "title": "像產品發佈一樣冷靜、精準地完成網站體驗。",
     "body": "當你需要企業門戶、營運工具或品牌改版保持高質感時，我們負責策略、設計與工程。",
-    "ctaButton": "預約需求洽談",
+    "reactDocs": "預約需求洽談",
+    "tailwindDocs": "下載服務簡介",
     "blocks": [
       {
         "tag": "企業門戶",
@@ -38,6 +39,16 @@
     "title": "告訴我們你的上線時程",
     "body": "透過 <link>{{email}}</link> 發送需求，我們會在一個工作天內回覆範疇與報價。",
     "emailCta": "寫信給 Z&E Digital",
-    "backHome": "返回首頁"
+    "backHome": "返回首頁",
+    "channels": [
+      { "label": "Email", "value": "hello@zedigital.studio", "type": "email" },
+      { "label": "WhatsApp", "value": "+852 9123 4567", "type": "whatsapp" }
+    ],
+    "promo": {
+      "badge": "Hong Kong • GMT+8",
+      "title": "24 小時內回覆",
+      "body": "分享產品簡介、現有技術與發布計畫，我們會提供針對香港團隊的階段目標與預算。",
+      "items": ["前端健檢", "設計系統", "多語/在地化", "效能調校"]
+    }
   }
 }

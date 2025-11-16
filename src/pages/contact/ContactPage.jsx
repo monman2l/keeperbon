@@ -1,19 +1,16 @@
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
-const EMAIL = "399199878@qq.com";
-
-const contactChannels = [
-  { label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-  {
-    label: "WhatsApp",
-    value: "+852 6689 43973",
-    href: "https://wa.me/85266894390",
-  },
-];
+const EMAIL = "hello@zedigital.studio";
+const CHANNEL_URLS = {
+  email: `mailto:${EMAIL}`,
+  whatsapp: "https://wa.me/85291234567",
+};
 
 function ContactPage() {
   const { t } = useTranslation();
+  const channels = t("contact.channels", { returnObjects: true });
+  const promo = t("contact.promo", { returnObjects: true });
 
   return (
     <section className="grid w-full grid-cols-1 gap-10 lg:grid-cols-[0.9fr,_1.1fr]">
@@ -42,18 +39,23 @@ function ContactPage() {
         </p>
 
         <div className="mt-8 space-y-4">
-          {contactChannels.map((channel) => (
-            <a
-              key={channel.label}
-              href={channel.href}
-              className="flex items-center justify-between rounded-2xl border border-brand-100 bg-brand-50/70 px-5 py-4 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-white"
-              target={channel.href.startsWith("http") ? "_blank" : undefined}
-              rel={channel.href.startsWith("http") ? "noreferrer" : undefined}
-            >
-              <span>{channel.label}</span>
-              <span className="text-brand-400">{channel.value}</span>
-            </a>
-          ))}
+          {Array.isArray(channels) &&
+            channels.map((channel) => {
+              const href = CHANNEL_URLS[channel.type] ?? channel.value;
+              const needsBlank = href.startsWith("http");
+              return (
+                <a
+                  key={channel.label}
+                  href={href}
+                  className="flex items-center justify-between rounded-2xl border border-brand-100 bg-brand-50/70 px-5 py-4 text-sm font-semibold text-brand-700 transition hover:border-brand-300 hover:bg-white"
+                  target={needsBlank ? "_blank" : undefined}
+                  rel={needsBlank ? "noreferrer" : undefined}
+                >
+                  <span>{channel.label}</span>
+                  <span className="text-brand-400">{channel.value}</span>
+                </a>
+              );
+            })}
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
@@ -76,28 +78,20 @@ function ContactPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),_transparent_55%)]" />
         <div className="relative z-10 space-y-6">
           <p className="text-xs uppercase tracking-[0.5em] text-white/70">
-            Hong Kong • GMT+8
+            {promo?.badge}
           </p>
-          <h2 className="text-3xl font-semibold">We reply within 24 hours</h2>
-          <p className="text-white/80">
-            Share your product brief, tech stack, or rollout plan. We respond
-            with scoped milestones and a lean budget tailored to Hong Kong SaaS,
-            finance, and web3 teams.
-          </p>
+          <h2 className="text-3xl font-semibold">{promo?.title}</h2>
+          <p className="text-white/80">{promo?.body}</p>
           <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              "Frontend audit",
-              "Design system",
-              "Localization",
-              "Perf tuning",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-white/20 bg-white/10 px-4 py-5 text-sm uppercase tracking-[0.4em] text-white/80"
-              >
-                {item}
-              </div>
-            ))}
+            {Array.isArray(promo?.items) &&
+              promo.items.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/20 bg-white/10 px-4 py-5 text-sm uppercase tracking-[0.4em] text-white/80"
+                >
+                  {item}
+                </div>
+              ))}
           </div>
         </div>
       </div>

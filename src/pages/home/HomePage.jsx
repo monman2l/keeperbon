@@ -31,7 +31,6 @@ function HomePage() {
             >
               {t("home.ctaButton")}
             </a>
-            
           </div>
         </div>
       </section>

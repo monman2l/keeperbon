@@ -75,8 +75,18 @@ function RootLayout() {
         </div>
       </header>
 
-      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-12">
-        <Outlet />
+      <main className="relative z-10 flex flex-1 px-0 py-12">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-1/2 w-[160vw] -translate-x-1/2 opacity-70"
+          style={{
+            backgroundImage: "radial-gradient(#e0e0e0 1px, transparent 1px)",
+            backgroundSize: "12px 12px",
+          }}
+        />
+        <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-6">
+          <Outlet />
+        </div>
       </main>
 
       <footer className="relative z-10 border-t border-white/30 bg-brand-900 text-center text-xs text-brand-100">

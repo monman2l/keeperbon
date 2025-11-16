@@ -14,7 +14,8 @@
     "eyebrow": "Z&E Digital · Hong Kong",
     "title": "Web experiences with the calm precision of a product launch.",
     "body": "We build the portals, internal tools, and marketing refreshes founders need when nothing short of premium will do.",
-    "ctaButton": "Book a discovery call",
+    "reactDocs": "Book a discovery call",
+    "tailwindDocs": "Download capabilities",
     "blocks": [
       {
         "tag": "Corporate portals",
@@ -38,6 +39,21 @@
     "title": "Tell us about your launch timeline",
     "body": "Share your brief via <link>{{email}}</link>. We reply within one business day with scope and budget.",
     "emailCta": "Email Z&E Digital",
-    "backHome": "Back to Home"
+    "backHome": "Back to Home",
+    "channels": [
+      { "label": "Email", "value": "hello@zedigital.studio", "type": "email" },
+      { "label": "WhatsApp", "value": "+852 9123 4567", "type": "whatsapp" }
+    ],
+    "promo": {
+      "badge": "Hong Kong • GMT+8",
+      "title": "We reply within 24 hours",
+      "body": "Share your product brief, tech stack, or rollout plan. We respond with scoped milestones and a lean budget tailored to Hong Kong teams.",
+      "items": [
+        "Frontend audit",
+        "Design system",
+        "Localization",
+        "Performance tuning"
+      ]
+    }
   }
 }
