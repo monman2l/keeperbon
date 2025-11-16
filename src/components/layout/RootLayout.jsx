@@ -75,10 +75,10 @@ function RootLayout() {
         </div>
       </header>
 
-      <main className="relative z-10 flex flex-1 px-0 py-12">
+      <main className="relative z-10 flex flex-1 overflow-hidden px-0 py-12">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-1/2 w-[160vw] -translate-x-1/2 opacity-70"
+          className="pointer-events-none absolute inset-0 opacity-70"
           style={{
             backgroundImage: "radial-gradient(#e0e0e0 1px, transparent 1px)",
             backgroundSize: "12px 12px",
