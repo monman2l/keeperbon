@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
-const EMAIL = "hello@zedigital.studio";
+const EMAIL = "399199878@qq.com";
 
 const contactChannels = [
   { label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
   {
     label: "WhatsApp",
-    value: "+852 9123 4567",
-    href: "https://wa.me/85291234567",
+    value: "+852 6689 43973",
+    href: "https://wa.me/85266894390",
   },
-  { label: "Calendly", value: "15 min intro", href: "https://calendly.com" },
 ];
 
 function ContactPage() {

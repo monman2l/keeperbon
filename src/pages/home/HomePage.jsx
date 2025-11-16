@@ -1,113 +1,76 @@
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-const EMAIL = "hello@zedigital.studio";
-const CASE_STUDY_URL = `mailto:${EMAIL}?subject=Z%26E%20Digital%20Case%20Studies`;
-const CAPABILITY_URL = `mailto:${EMAIL}?subject=Z%26E%20Digital%20Capability%20Deck`;
-
-const highlights = [
-  { title: "4-week sprints", subtitle: "From brief to launch" },
-  { title: "Webflow / React", subtitle: "Pick your stack" },
-  { title: "HK & APAC focus", subtitle: "UTC+8 delivery" },
-];
+const EMAIL = "399199878@qq.com";
+const CASE_STUDY_URL = `mailto:${EMAIL}?subject=Z%26E%20Digital%20Discovery`;
 
 function HomePage() {
   const { t } = useTranslation();
+  const blocks = t("home.blocks", { returnObjects: true });
 
   return (
-    <section className="grid w-full grid-cols-1 gap-10 lg:grid-cols-[1.1fr,_0.9fr]">
-      <div className="rounded-4xl relative overflow-hidden rounded-[32px] border border-white/40 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-700 p-10 text-white shadow-[0_40px_120px_-60px_rgba(30,33,94,0.85)]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),_transparent_55%)]" />
-        <div className="relative z-10 flex flex-col gap-6">
-          <div>
-            <p className="text-xs uppercase tracking-[0.5em] text-white/70">
-              {t("home.eyebrow")}
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
-              {t("home.title")}
-            </h1>
-            <p className="mt-4 text-base text-white/80">
-              <Trans
-                i18nKey="home.body"
-                values={{ file: "src/pages/home/HomePage.jsx" }}
-                components={{
-                  code: (
-                    <code className="rounded bg-white/20 px-1.5 py-0.5 text-sm font-semibold text-white" />
-                  ),
-                }}
-              />
-            </p>
-          </div>
+    <div className="space-y-8">
+      <section className="relative overflow-hidden rounded-[48px] border border-white/30 bg-gradient-to-br from-brand-800 via-brand-600 to-brand-700 px-6 py-16 text-white shadow-[0_80px_200px_-80px_rgba(22,18,64,0.95)]">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-10 top-10 h-60 w-60 rounded-full bg-white/15 blur-3xl" />
+          <div className="absolute bottom-[-15%] right-[-5%] h-[320px] w-[320px] rounded-full bg-brand-400/30 blur-3xl animate-[spin_24s_linear_infinite]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.2),_transparent_65%)]" />
+        </div>
 
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col gap-10">
+          <p className="text-xs uppercase tracking-[0.6em] text-white/70">
+            {t("home.eyebrow")}
+          </p>
+          <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+            {t("home.title")}
+          </h1>
+          <p className="max-w-3xl text-lg text-white/80">{t("home.body")}</p>
           <div className="flex flex-wrap gap-4">
             <a
-              className="inline-flex items-center gap-2 rounded-full bg-white/95 px-6 py-3 text-sm font-semibold text-brand-700 shadow-lg shadow-brand-900/20 transition hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full bg-white/95 px-7 py-3 text-sm font-semibold text-brand-700 shadow-lg shadow-brand-900/25 transition hover:bg-white"
               href={CASE_STUDY_URL}
             >
-              {t("home.reactDocs")}
+              {t("home.ctaButton")}
             </a>
-            <a
-              className="inline-flex items-center gap-2 rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-              href={CAPABILITY_URL}
-            >
-              {t("home.tailwindDocs")}
-            </a>
+            
           </div>
+        </div>
+      </section>
 
-          <div className="grid gap-3 sm:grid-cols-3">
-            {highlights.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-white/30 bg-white/10 px-4 py-5 text-left backdrop-blur"
-              >
-                <p className="text-lg font-semibold">{item.title}</p>
-                <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-                  {item.subtitle}
+      <section className="space-y-6">
+        {Array.isArray(blocks) &&
+          blocks.map((block, index) => (
+            <article
+              key={block.title}
+              className="relative overflow-hidden rounded-[40px] border border-brand-100 bg-white/80 px-6 py-12 text-brand-900 shadow-[0_40px_140px_-80px_rgba(20,24,67,0.6)] backdrop-blur"
+            >
+              <div className="absolute inset-0 opacity-70">
+                <div className="absolute -right-16 top-1/3 h-40 w-40 rounded-full bg-brand-100 blur-[120px]" />
+                <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-brand-200 to-transparent" />
+              </div>
+              <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.5em] text-brand-400">
+                    {block.tag}
+                  </p>
+                  <h2 className="mt-4 text-3xl font-semibold text-brand-900 sm:text-4xl">
+                    {block.title}
+                  </h2>
+                </div>
+                <p className="max-w-xl text-base text-brand-600">
+                  {block.body}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="rounded-[32px] border border-brand-100 bg-white/80 p-10 text-brand-800 shadow-[0_40px_100px_-65px_rgba(22,33,94,0.8)] backdrop-blur">
-        <div className="space-y-6">
-          <div className="rounded-2xl border border-brand-100 bg-brand-50/80 p-6">
-            <p className="text-sm uppercase tracking-[0.45em] text-brand-500">
-              Engagement Flow
-            </p>
-            <ol className="mt-4 space-y-3 text-brand-800">
-              {["Discovery & scope", "Design & content", "Build & QA"].map(
-                (step) => (
-                  <li
-                    key={step}
-                    className="flex items-center gap-3 rounded-xl border border-white/80 bg-white px-4 py-3 text-sm font-semibold shadow-brand-900/5"
-                  >
-                    <span className="text-brand-400">›</span>
-                    <code>{step}</code>
-                  </li>
-                ),
-              )}
-            </ol>
-          </div>
-
-          <div className="rounded-2xl border border-brand-100/80 bg-white/90 p-6">
-            <p className="text-sm uppercase tracking-[0.45em] text-brand-500">
-              Tech Stack
-            </p>
-            <div className="mt-5 grid grid-cols-2 gap-4 text-sm font-semibold text-brand-700">
-              {["Vite 5", "React 19", "Tailwind 3", "i18next"].map((tech) => (
-                <div
-                  key={tech}
-                  className="rounded-xl border border-brand-100/80 bg-brand-50/80 px-4 py-3 text-center"
-                >
-                  {tech}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              <div className="mt-10 h-px w-full bg-gradient-to-r from-brand-100 via-brand-200 to-transparent" />
+              <div className="mt-6 flex items-center gap-3 text-sm text-brand-500">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand-200/70 text-brand-400">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span> {t("brand")} · bespoke delivery</span>
+              </div>
+            </article>
+          ))}
+      </section>
+    </div>
   );
 }
 

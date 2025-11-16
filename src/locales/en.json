@@ -11,11 +11,27 @@
   },
   "footer": "© {{year}} Z&E Digital · Hong Kong",
   "home": {
-    "eyebrow": "Boutique Web Studio",
-    "title": "Fast, polished websites for ambitious teams",
-    "body": "We craft lightning-fast marketing sites and product frontends. Edit <code>{{file}}</code> and keep shipping.",
-    "reactDocs": "View Case Studies",
-    "tailwindDocs": "Download Capability Deck"
+    "eyebrow": "Z&E Digital · Hong Kong",
+    "title": "Web experiences with the calm precision of a product launch.",
+    "body": "We build the portals, internal tools, and marketing refreshes founders need when nothing short of premium will do.",
+    "ctaButton": "Book a discovery call",
+    "blocks": [
+      {
+        "tag": "Corporate portals",
+        "title": "Still pitching from slides?",
+        "body": "We craft investor-grade portals with narrative, CMS, and governance baked in."
+      },
+      {
+        "tag": "Operational platforms",
+        "title": "Ops buried in spreadsheets?",
+        "body": "We design consoles and workflows that cut decision time and surface the right data."
+      },
+      {
+        "tag": "Brand refresh",
+        "title": "Site feels off-brand?",
+        "body": "We rebuild copy, art direction, and performance so every launch feels bespoke."
+      }
+    ]
   },
   "contact": {
     "eyebrow": "Partner With Us",
